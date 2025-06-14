@@ -18,6 +18,7 @@
             name = "backend-shell";
             packages = with pkgs; [
                 python314
+                pyright
             ];
           };
 

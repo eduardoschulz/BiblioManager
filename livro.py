@@ -14,7 +14,7 @@ class Livro:
         print('Livro devolvido\n')
     
     def exibirInformacoes(self):
-        print(f'Titulo: {self.titulo}\nAutor: {self.autor}\nISBN: {self.isbn}\nDisponibilidade: {"Disponivel" if self.disponibilidade else "Indisponivel"} ')
+        print(f'Titulo: {self.titulo}\nAutor: {self.autor}\nISBN: {self.isbn}\nDisponibilidade: {"Disponivel" if self.disponibilidade else "Indisponivel"}\n')
 
 
 
