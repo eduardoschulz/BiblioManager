@@ -2,7 +2,7 @@
   description = "dev env";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
@@ -17,8 +17,9 @@
           backend = pkgs.mkShell {
             name = "backend-shell";
             packages = with pkgs; [
-                python314
+                python313
                 pyright
+                python313Packages.textual-dev
             ];
           };
 
