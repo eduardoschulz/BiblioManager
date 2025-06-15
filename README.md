@@ -25,7 +25,7 @@
   - Atributos: livro, usuário, data de empréstimo, data de devolução
   - Método: `exibirResumo()`
 
-## ▶️ Como Executar
+## Como Executar
 
 1. Tenha o Python 314 instalado.
 2. Execute o arquivo principal:
