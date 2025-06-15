@@ -2,6 +2,9 @@ from livro import Livro
 from usuario import Professor, Aluno
 from emprestimo import Emprestimo
 
+## Autores: Eduardo Schulz e Arthur Wild
+
+
 #lista para guardas os todos os livros
 livros = []
 #lista de emprestimos
