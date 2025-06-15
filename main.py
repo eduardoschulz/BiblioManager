@@ -5,17 +5,18 @@ from emprestimo import Emprestimo
 ## Autores: Eduardo Schulz e Arthur Wild
 
 
-#lista para guardas os todos os livros
+# lista para guardas os todos os livros
 livros = []
-#lista de emprestimos
+# lista de emprestimos
 emprestimos = []
-#lista de alunos 
+# lista de alunos
 alunos = []
-#lista de professores
+# lista de professores
 professores = []
 
+
 def cadastroLivro():
-    print('Cadastro de Livro\n')
+    print("Cadastro de Livro\n")
     titulo = input("Titulo: ")
     autor = input("Autor: ")
     isbn = input("ISBN: ")
@@ -50,7 +51,9 @@ def emprestarLivro():
         return
     print("Lista de livros disponíveis:")
     for i, livro in enumerate(livros):
-        print(f"({i}) - {livro.titulo} - {'Disponível' if livro.disponibilidade else 'Indisponível'}")
+        print(
+            f"({i}) - {livro.titulo} - {'Disponível' if livro.disponibilidade else 'Indisponível'}"
+        )
 
     try:
         indice_livro = int(input("Escolha o número do livro: "))
@@ -137,15 +140,20 @@ def parsedoinput(valor):
             exit(0)
         case _:
             print("Opção inválida.")
+
+
 def printOpcoes():
-    print("""Opções:
+    print(
+        """Opções:
 (1) - Cadastro de Livro
 (2) - Cadastro de Aluno ou Professor
 (3) - Empréstimo
 (4) - Exibir Dados
 (5) - Devolver Livro
 (6) - Sair
-          """)
+          """
+    )
+
 
 while True:
     printOpcoes()
@@ -154,6 +162,4 @@ while True:
         num = int(recv)
         parsedoinput(num)
     except ValueError:
-        print('Digite um número válido')
-
-
+        print("Digite um número válido")

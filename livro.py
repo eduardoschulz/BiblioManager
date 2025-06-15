@@ -7,16 +7,13 @@ class Livro:
 
     def emprestar(self):
         self.disponibilidade = False
-        print('Livro emprestado\n')
+        print("Livro emprestado\n")
 
     def devolver(self):
         self.disponibilidade = True
-        print('Livro devolvido\n')
-    
+        print("Livro devolvido\n")
+
     def exibirInformacoes(self):
-        print(f'Titulo: {self.titulo}\nAutor: {self.autor}\nISBN: {self.isbn}\nDisponibilidade: {"Disponivel" if self.disponibilidade else "Indisponivel"}\n')
-
-
-
-
-    
+        print(
+            f'Titulo: {self.titulo}\nAutor: {self.autor}\nISBN: {self.isbn}\nDisponibilidade: {"Disponivel" if self.disponibilidade else "Indisponivel"}\n'
+        )
