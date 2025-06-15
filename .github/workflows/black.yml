@@ -17,9 +17,6 @@ jobs:
 
       - name: Install Black
         run: pip install black
-
-      - name: Run Black (check only)
-        run: black --check .
         
       - name: Run Black and auto-commit
         run: |
