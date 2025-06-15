@@ -1,5 +1,7 @@
 name: Black Code Formatter
-
+permissions:
+  contents: write
+  
 on: [push, pull_request]
 
 jobs:
@@ -18,4 +20,14 @@ jobs:
 
       - name: Run Black (check only)
         run: black --check .
+        
+      - name: Run Black and auto-commit
+        run: |
+          black .
+          if [[ `git status --porcelain` ]]; then
+            git config user.name "github-actions"
+            git config user.email "actions@github.com"
+            git commit -am "Apply Black formatting"
+            git push
+          fi
 
